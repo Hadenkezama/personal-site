@@ -1,0 +1,353 @@
+/* Style for the navbar*/
+body {
+	background: linear-gradient(to right, #dbd6d1, #cbb29a);
+	width: auto;
+	height: 100vh; 
+}
+
+@media(max-width:700px){
+.nav-grid-container{
+    background-color: #5e5147;
+    width: 95%;
+    border-radius: 16px;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    color: white;
+}
+
+.nav-grid-item-right{
+    text-align: right;
+    padding-right:10px
+}
+
+.nav-grid-item-left > button{
+    color:white;
+    font-size: 1.5em;
+    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    background: none;
+    border: none;
+    transition-duration: 0.4s;
+    padding-top:10px;
+}
+
+.nav-grid-item-left > button:hover {
+    color: black;
+}
+
+.main-grid-container{
+    background-color: #aca095;
+    width: 95%;
+    border-radius: 16px;
+    padding-left: 5%;
+    color: white;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.technologies{
+    background: linear-gradient(to right, #aca095, #dbd6d1);
+    border-radius: 16px;
+    text-align: left;
+    padding-left: 5%;
+    color:white;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.footer-container{
+    text-align: center;
+}
+
+.footer-container-github{
+    margin-right: 5%;
+}
+
+
+
+
+/* Style for the Email pop up*/
+.email-pop-container{
+    position: absolute;
+    height: auto;
+    width: 70%;
+    background-color:#dbd6d1;
+    z-index: 1;
+    border: 2px solid #5e5147; 
+    border-radius: 16px;
+    text-align: center;
+    
+ }
+
+ .email-pop-container > button{
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 0.75em;
+     padding-right: 3px;
+     transition-duration: 0.4s;
+ }
+
+ .email-pop-container > button:hover{
+    color:black;
+ }
+ 
+ .email-pop-contact-me{
+     text-decoration: underline;
+     color: #5e5147;
+ }
+ 
+ .email-pop-name{
+     color: #5e5147;
+     box-sizing: border-box;
+     
+ }
+ 
+ .email-pop-name > textarea {
+     resize: none;
+     height:auto;
+     width: 70%;
+     box-sizing: border-box;
+     border: 2px solid #aca095;
+     background-color: #f8f8f8;
+ }
+ 
+ .email-pop-email{
+     color: #5e5147;
+     box-sizing: border-box;
+ }
+ 
+ .email-pop-email > textarea{
+     resize: none;
+     height:auto;
+     width: 70%;
+     box-sizing: border-box;
+     border: 2px solid #aca095;
+     border-radius: 2px solid #ccc;
+     background-color: #f8f8f8;
+ }
+ 
+ .email-pop-body{
+     color:#5e5147;
+ }
+ 
+ .email-pop-body > textarea{
+     width: 80%;
+     height: 100%;
+     padding: 12px 20px;
+     box-sizing: border-box;
+     border: 2px solid #aca095;
+     border-radius: 4px;
+     background-color: #f8f8f8;
+     resize: none;
+ }
+}
+
+
+
+
+@media(min-width: 700px){
+   
+    .nav-grid-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background: linear-gradient(to right, #5e5147,#aca095,#dbd6d1);
+        height: 100%;
+        width: auto;
+        margin-bottom: 10px;
+        border-radius: 16px;
+    }
+    
+    .nav-grid-item-left{
+        text-align: left;
+    }
+    
+    .nav-grid-item-left > button{
+        display: block;
+        font-size: 1.5em;
+        padding-left: 10%;
+        padding-top: 10%;
+        color:white;
+        text-decoration:underline;
+        font-family: 'Times New Roman';
+        font-weight: bolder;
+        background:none;
+        border:none;
+        transition-duration: 0.4s;
+    }
+    
+    .nav-grid-item-left > button:hover{
+        color:#23150e;
+    }
+    
+    .nav-grid-item-right{
+        text-align: right;
+        color:#5e5147;
+        padding-right: 20px;
+    }
+    
+    .nav-grid-item-center{
+        text-align: center;
+    }
+
+    .main-grid-container{
+        display: grid;
+        grid-template-columns: auto auto;
+        width:fit-content;
+        color:white;
+    }
+    
+    
+    .main-grid-about-me{
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: #aca095;
+        margin-right: 10px;
+        border-radius: 16px;
+
+    }
+    
+    
+    .main-grid-technologies{
+        text-align: left;
+        background-color: #5e5147;
+        padding-left:5%;
+        border-radius: 16px;
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin-bottom: 10px;
+        
+    }
+    
+    .main-grid-technologies > h3 {
+        text-decoration: underline;
+    }
+    
+   
+    
+    .main-grid-interests-hobbies{
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        background: linear-gradient(to right, #5e5147,#dbd6d1);
+        padding-top:10%;
+        padding-bottom:10%;
+        padding-left: 5%;
+        padding-right: 5%;
+        border-radius: 16px;
+    }
+
+
+    .footer-container{
+        text-align: center;
+        height:100px;
+        background-color: #aca095;
+        padding-top: 20px;
+        border-radius: 16px;
+        
+    }
+    
+    
+    .footer-container-github{
+        padding-right: 10px;
+        
+    }
+
+    .email-pop-container{
+        position: fixed;
+        top:auto;
+        right:35%;
+        height: auto;
+        width: 30%;
+        background-color:#dbd6d1;
+        z-index: 1;
+        border: 2px solid #5e5147;
+        padding-left: 0;
+        border-radius: 16px;
+     }
+     
+     .email-pop-contact-me{
+         text-decoration: underline;
+         color: #5e5147;
+         
+     }
+
+     .email-pop-container > button{
+         font-family: 'Times New Roman', Times, serif;
+         font-size: 0.75em;
+         
+     }
+
+    
+     
+     .email-pop-name{
+         color: #5e5147;
+         box-sizing: border-box;
+         
+     }
+     
+     .email-pop-name > textarea {
+         resize: none;
+         height:auto;
+         width: 70%;
+         box-sizing: border-box;
+         border: 2px solid #aca095;
+         background-color: #f8f8f8;
+     }
+     
+     .email-pop-email{
+         color: #5e5147;
+         box-sizing: border-box;
+     }
+     
+     .email-pop-email > textarea{
+         resize: none;
+         height:auto;
+         width: 70%;
+         box-sizing: border-box;
+         border: 2px solid #aca095;
+         border-radius: 2px solid #ccc;
+         background-color: #f8f8f8;
+     }
+     
+     .email-pop-body{
+         color:#5e5147;
+     }
+     
+     .email-pop-body > textarea{
+         width: 80%;
+         height: 100%;
+         padding: 12px 20px;
+         box-sizing: border-box;
+         border: 2px solid #aca095;
+         border-radius: 4px;
+         background-color: #f8f8f8;
+         resize: none;
+     }
+    
+    
+}
+
+
+
+
+
+
+/* Style for the Main content*/
+
+
+
+/*Style for the footer*/
+
+
+.test-div{
+    padding-top: 100%;
+    width: 100%;
+    background-color:#F9E07F;
+    color:#F9E07F;
+}
