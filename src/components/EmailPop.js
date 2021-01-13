@@ -59,7 +59,7 @@ function handleSubmit(event, name, email, body) {
   event.preventDefault();
   axios({
     method: "POST",
-    url: "http://localhost:3002/send",
+    url: "https://haden-kezama.herokuapp.com",
     data: { name, email, body },
   }).then((response) => {
     if (response.data.status === "success") {
