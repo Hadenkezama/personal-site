@@ -1,15 +1,28 @@
 import React, { useState } from "react";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
 
-function EmailPop(props) {
+function EmailPop({ showPopUp }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [body, setBody] = useState("");
+  const [validForm, setValidForm] = useState(true);
+  const [errors, setErrors] = useState({ name: "", email: "", body: "" });
 
   return (
     <form
       className="email-pop-container"
-      onSubmit={(event) => handleSubmit(event, name, email, body)}
+      onSubmit={(event) =>
+        handleSubmit(
+          event,
+          name,
+          email,
+          body,
+          setValidForm,
+          showPopUp,
+          setErrors
+        )
+      }
       method="post"
     >
       <h1 className="email-pop-contact-me">Contact Me</h1>
@@ -23,6 +36,8 @@ function EmailPop(props) {
           onChange={(event) => setName(event.target.value)}
           onBlur={(event) => setName(event.target.value)}
         />
+        <br />
+        {!validForm ? <span style={{ color: "red" }}>{errors.name}</span> : ""}
       </div>
       <br />
       <div className="email-pop-email">
@@ -35,6 +50,8 @@ function EmailPop(props) {
           onChange={(event) => setEmail(event.target.value)}
           onBlur={(event) => setEmail(event.target.value)}
         />
+        <br />
+        {!validForm ? <span style={{ color: "red" }}>{errors.email}</span> : ""}
       </div>
       <br />
       <div className="email-pop-body">
@@ -47,16 +64,71 @@ function EmailPop(props) {
           onChange={(event) => setBody(event.target.value)}
           onBlur={(event) => setBody(event.target.value)}
         />
+        <br />
+        {!validForm ? <span style={{ color: "red" }}>{errors.body}</span> : ""}
       </div>
+
       <br />
+
+      <ReCAPTCHA sitekey="6LdWrywaAAAAALDcBfRYEK0NnL8YMSSnusd_HM50" />
       <button>Send</button>
-      <button onClick={() => props.showPopUp(false)}>Close</button>
+      <button onClick={() => showPopUp(false)}>Close</button>
     </form>
   );
 }
 
-function handleSubmit(event, name, email, body) {
+function handleSubmit(
+  event,
+  name,
+  email,
+  body,
+  setValidForm,
+  showPopUp,
+  setErrors
+) {
   event.preventDefault();
+  let anyFormError = false;
+  let nameError = "";
+  let emailError = "";
+  let bodyError = "";
+
+  if (!name) {
+    nameError = "Name can not be left blank";
+    anyFormError = true;
+  }
+
+  if (typeof email !== "undefined") {
+    let lastAtPos = email.lastIndexOf("@");
+    let lastDotPos = email.lastIndexOf(".");
+
+    if (
+      !(
+        lastAtPos < lastDotPos &&
+        lastAtPos > 0 &&
+        email.indexOf("@@") === -1 &&
+        lastDotPos > 2 &&
+        email.length - lastDotPos > 2
+      )
+    ) {
+      emailError = "Invalid email";
+      anyFormError = true;
+    }
+  }
+
+  if (!body) {
+    bodyError = "Message can not be left blank";
+    anyFormError = true;
+  }
+
+  if (anyFormError) {
+    setValidForm(false);
+    setErrors({ name: nameError, email: emailError, body: bodyError });
+    return;
+  }
+
+  setValidForm(true);
+  showPopUp(false);
+
   axios({
     method: "POST",
     url: "https://haden-kezama.herokuapp.com",
