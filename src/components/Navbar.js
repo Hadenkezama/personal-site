@@ -6,15 +6,15 @@ function Navbar() {
   const [showPop, showPopUp] = useState(false);
   return (
     <nav id="nav" className="nav-grid-container">
-      <div className="nav-grid-item-left">
+      <div className="nav-grid-contact-me">
         <button onClick={() => showPopUp(!showPop)}>CONTACT ME</button>
       </div>
 
-      <div className="nav-grid-item-center">
+      <div className="nav-grid-pop-up">
         {showPop ? <EmailPop showPopUp={showPopUp} /> : ""}
       </div>
 
-      <div className="nav-grid-item-right">
+      <div className="nav-grid-name-title">
         <h1>HADEN R.K</h1>
         <h2>WEB DEVELOPER</h2>
       </div>
