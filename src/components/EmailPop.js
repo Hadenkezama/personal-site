@@ -69,8 +69,12 @@ function EmailPop({ showPopUp }) {
       </div>
 
       <br />
-
-      <ReCAPTCHA sitekey="6LdWrywaAAAAALDcBfRYEK0NnL8YMSSnusd_HM50" />
+      <div className="captcha">
+        <ReCAPTCHA
+          sitekey="6LedtiwaAAAAAPcGaePnt8UP5Xsh5o4xdHjt1o2x"
+          size="invisible"
+        />
+      </div>
       <button>Send</button>
       <button onClick={() => showPopUp(false)}>Close</button>
     </form>
