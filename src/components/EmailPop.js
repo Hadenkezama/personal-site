@@ -12,10 +12,10 @@ function EmailPop(props) {
       onSubmit={(event) => handleSubmit(event, name, email, body)}
       method="post"
     >
-      <h1 className="email-pop-contact-me">Contact Me!</h1>
+      <h1 className="email-pop-contact-me">Contact Me</h1>
       <div className="email-pop-name">
-        <h5>Your Name</h5>
-        <textarea
+        <h2>Your Name</h2>
+        <input
           type="text"
           id="name"
           value={name}
@@ -26,9 +26,9 @@ function EmailPop(props) {
       </div>
       <br />
       <div className="email-pop-email">
-        <h5>Your Email</h5>
-        <textarea
-          type="text"
+        <h2>Your Email</h2>
+        <input
+          type="email"
           id="email"
           value={email}
           placeholder="Enter your email"
@@ -38,7 +38,7 @@ function EmailPop(props) {
       </div>
       <br />
       <div className="email-pop-body">
-        <h5>Your Message</h5>
+        <h2>Your Message</h2>
         <textarea
           type="text"
           id="message"

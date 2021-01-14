@@ -17,11 +17,16 @@ function MainContent() {
 
       <div className="main-grid-technologies">
         <h1>Technologies</h1>
-        <h3>Programming languages</h3> C++, Javascript, HTML, CSS, SQL
-        <h3>Libraries</h3>React
-        <h3>Server Side</h3> NodeJS / Express, Nginx
-        <h3>DBMS</h3> MySQL, MongoDB
-        <h3>Tools</h3> VS code, Git, GitHub
+        <h3>Programming Languages</h3>
+        <p>C++, Javascript, HTML, CSS, SQL</p>
+        <h3>Libraries</h3>
+        <p>React</p>
+        <h3>Server Side</h3>
+        <p>NodeJS / Express, Nginx</p>
+        <h3>DBMS</h3>
+        <p>MySQL, MongoDB</p>
+        <h3>Tools</h3>
+        <p>VS code, Git, GitHub</p>
       </div>
       <div className="main-grid-interests-hobbies">
         <h1>Hobbies & Interestests</h1>
