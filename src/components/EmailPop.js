@@ -5,7 +5,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 function EmailPop({ showPopUp }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [body, setBody] = useState("");
+  const [message, setMessage] = useState("");
   const [validForm, setValidForm] = useState(true);
   const [errors, setErrors] = useState({ name: "", email: "", body: "" });
 
@@ -17,7 +17,7 @@ function EmailPop({ showPopUp }) {
           event,
           name,
           email,
-          body,
+          message,
           setValidForm,
           showPopUp,
           setErrors
@@ -59,10 +59,10 @@ function EmailPop({ showPopUp }) {
         <textarea
           type="text"
           id="message"
-          value={body}
+          value={message}
           placeholder="What do you want to say?"
-          onChange={(event) => setBody(event.target.value)}
-          onBlur={(event) => setBody(event.target.value)}
+          onChange={(event) => setMessage(event.target.value)}
+          onBlur={(event) => setMessage(event.target.value)}
         />
         <br />
         {!validForm ? <span style={{ color: "red" }}>{errors.body}</span> : ""}
@@ -85,7 +85,7 @@ function handleSubmit(
   event,
   name,
   email,
-  body,
+  message,
   setValidForm,
   showPopUp,
   setErrors
@@ -119,7 +119,7 @@ function handleSubmit(
     }
   }
 
-  if (!body) {
+  if (!message) {
     bodyError = "Message can not be left blank";
     anyFormError = true;
   }
@@ -135,8 +135,8 @@ function handleSubmit(
 
   axios({
     method: "POST",
-    url: "https://haden-kezama.herokuapp.com",
-    data: { name, email, body },
+    url: "https://haden-kezama.herokuapp.com/send",
+    data: { name, email, message },
   }).then((response) => {
     if (response.data.status === "success") {
       alert("Message Sent.");
