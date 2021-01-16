@@ -75,8 +75,12 @@ function EmailPop({ showPopUp }) {
           size="invisible"
         />
       </div>
-      <button>Send</button>
-      <button onClick={() => showPopUp(false)}>Close</button>
+      <div className="button-container">
+        <button className="send">Send</button>
+        <button className="close" onClick={() => showPopUp(false)}>
+          Close
+        </button>
+      </div>
     </form>
   );
 }
@@ -138,7 +142,8 @@ function handleSubmit(
     url: "https://haden-kezama.herokuapp.com/send",
     data: { name, email, message },
   }).then((response) => {
-    if (response.data.status === "success") {
+    console.log(response.data);
+    if (response.data === "success") {
       alert("Message Sent.");
     } else if (response.data.status === "fail") {
       alert("Message failed to send.");
