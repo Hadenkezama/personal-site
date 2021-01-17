@@ -11,7 +11,10 @@ function Footer() {
         <img src={github} alt="" />
       </a>
 
-      <a className="footer-container-linkedin" href="https://ca.linkedin.com">
+      <a
+        className="footer-container-linkedin"
+        href="https://www.linkedin.com/in/haden-remoue-kezama-215357204/"
+      >
         <img src={linkedin} alt="" />
       </a>
     </footer>
