@@ -6,12 +6,16 @@ function MainContent() {
       <div className="main-grid-about-me">
         <h1>About Me</h1>
         <p>
-          I am a aspiring web developer passionate about creating stylish,
-          functional and responsive web applications. I graduated from the
-          University of Regina with a bachelors of science majoring in Computer
-          Science and minoring in Economics. In my free time I enjoy learning
-          new things about web development, going to the gym, and spending time
-          with family and friends.
+          I am an aspiring web developer. I graduated in December of 2020 with a
+          Bachelor of Science majoring in Computer Science and minoring in
+          Economics. Since then, I have spent a considerable amount of time on
+          Frontend Masters.com teaching myself the most current tools practiced
+          in the field of web development. I apply what I have learned into
+          personal projects which can be seen on my GitHub (link below). I enjoy
+          both front-end development and back-end development, and am eager to
+          learn more about both. In the “Technologies” section, I have listed
+          technologies I am currently proficient in. To inquire about anything,
+          please use the “Contact Me” button to send me an email!
         </p>
       </div>
 
@@ -31,12 +35,19 @@ function MainContent() {
       <div className="main-grid-interests-hobbies">
         <h1>Hobbies & Interestests</h1>
         <p>
-          I love to program. I spend a lot of my free time working on on my own
-          personal projects and learning about front-end and back-end
-          technologies. I am also interested in powerlifting, you can find me at
-          the gym 5-6 days lifting heavy things, putting them down, and lifting
-          them again. I am fan of the NFL (go Texans) and the NBA (go raptors).
-          Finally, I love to cook (go Gordon Ramsey).
+          When I am not coding, I can usually be spotted at the gym, in the
+          kitchen cooking, or watching NFL and NBA highlights. I have a love for
+          powerlifting. Something about lifting things up, putting them down and
+          then lifting them again really intrigues me. To fuel my gym addiction,
+          I gotta eat. Am I a great cook? No. Am I a mediocre cook? Also, no.
+          Luckily, I have an Instant Pot, which makes everything taste like
+          Grandma made it. Finally, to tie this essay together with another
+          smooth transition, once the food is made, I like to sit down with my
+          roommate and girlfriend to watch some NBA and NFL highlights. Why
+          highlights? Because we don’t have cable: strictly streaming services
+          and YouTube. Regardless, I am an avid Toronto Raptors and Houston
+          Texans fan with enough knowledge of both leagues to get by at any
+          local bar.
         </p>
       </div>
     </main>
