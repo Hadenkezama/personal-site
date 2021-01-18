@@ -9,7 +9,7 @@ function MainContent() {
           I am an aspiring web developer. I graduated in December of 2020 with a
           Bachelor of Science majoring in Computer Science and minoring in
           Economics. Since then, I have spent a considerable amount of time on
-          Frontend Masters.com teaching myself the most current tools practiced
+          Frontendmasters.com teaching myself the most current tools practiced
           in the field of web development. I apply what I have learned into
           personal projects which can be seen on my GitHub (link below). I enjoy
           both front-end development and back-end development, and am eager to
