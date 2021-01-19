@@ -12,7 +12,7 @@ function MainContent() {
           Frontendmasters.com teaching myself the most current tools practiced
           in the field of web development. I apply what I have learned into
           personal projects which can be seen on my GitHub (link below). I enjoy
-          both front-end development and back-end development, and am eager to
+          both front-end development and back-end development. I am eager to
           learn more about both. In the “Technologies” section, I have listed
           technologies I am currently proficient in. To inquire about anything,
           please use the “Contact Me” button to send me an email!
@@ -33,7 +33,7 @@ function MainContent() {
         <p>VS code, Git, GitHub</p>
       </div>
       <div className="main-grid-interests-hobbies">
-        <h1>Hobbies & Interestests</h1>
+        <h1>Hobbies & Interests</h1>
         <p>
           When I am not coding, I can usually be spotted at the gym, in the
           kitchen cooking, or watching NFL and NBA highlights. I have a love for

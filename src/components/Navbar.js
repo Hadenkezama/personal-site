@@ -15,7 +15,7 @@ function Navbar() {
       </div>
 
       <div className="nav-grid-name-title">
-        <h1>HADEN R.K</h1>
+        <h1>HADEN R.K.</h1>
         <h2>WEB DEVELOPER</h2>
       </div>
     </nav>
